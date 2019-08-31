@@ -18,6 +18,12 @@ export class VisA extends DefinitionBase {
         this.pts = [];
     }
     Render(ctx: CanvasRenderingContext2D) {
+        console.log(ctx);
+        ctx.beginPath();
+        ctx.arc(100, 100, 5, 0, 3.14 * 2);
+        ctx.closePath();
+        ctx.stroke();
+
         for (let i = 0; i < this.pts.length; ++i){
             this.pts[i].RenderPoint(ctx);
         }

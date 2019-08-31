@@ -3,8 +3,8 @@ import { Renderer } from './Core/Renderer';
 import { ActiveCommands } from './Core/ActiveCommands';
 import { MouseInteraction } from './Core/MouseInteraction';
 
-import { VisA } from './Definition/VisA';
-import { DS } from './Definition/DS';
+import { VisA } from './Definition/VisA/index.1';
+// import { DS } from './Definition/DS';
 
 export class Application {
 
@@ -27,7 +27,7 @@ export class Application {
         this.InitDefinition();
     }
     InitDefinition() {
-        // const visA = new VisA(this);
-        const ds = new DS(this);
+        const visA = new VisA(this);
+        // const ds = new DS(this);
     }
 }
